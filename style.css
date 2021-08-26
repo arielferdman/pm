@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Raleway:wght@300&display=swap');
+body {
+    text-align: center;
+}
+
+.top {
+    background-color: #FFFFFF;
+}
+
+.top h1 {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 85px;
+    color: #554055;
+}
+
+.top span {
+    width: 904px;
+    height: 116px;
+    left: 505px;
+    top: 152px;
+    font-family: 'PT Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 58px;
+    text-align: center;
+    color: #434444;
+}
+
+.top p {
+    height: 94px;
+    left: 680px;
+    top: 268px;
+    font-family: 'PT Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 31px;
+    line-height: 40px;
+    text-align: center;
+    color: #434444;
+}
+
+.section-2 {
+    background-color: #553F55;
+}
+
+#btn-1 {
+    left: 22.77%;
+    right: 58.42%;
+    top: 2.99%;
+    bottom: 94.45%;
+    background: #D4DFAA;
+    border-radius: 200px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    margin-top: 8px
+}
+
+#btn-2 {
+    left: 47.46%;
+    right: 20.23%;
+    top: 2.99%;
+    bottom: 94.46%;
+    background: #553F55;
+    border: 1.5px solid #D4DFAA;
+    box-sizing: border-box;
+    border-radius: 200px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-top: 8px
+}
+
+.btn-container h1 {
+    left: 37.27%;
+    right: 34.48%;
+    top: 8.54%;
+    bottom: 88.12%;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 85px;
+    color: #7FBFAA;
+}

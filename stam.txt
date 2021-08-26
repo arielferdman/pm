@@ -1,0 +1,2 @@
+git checkout -b david
+--set-upstream git
