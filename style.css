@@ -9,8 +9,6 @@ body {
 
 .top h1 {
     font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: 900;
     font-size: 72px;
     line-height: 85px;
     color: #554055;
@@ -30,7 +28,7 @@ body {
     color: #434444;
 }
 
-.top p {
+.text {
     height: 94px;
     left: 680px;
     top: 268px;
@@ -74,15 +72,23 @@ body {
     margin-top: 8px
 }
 
-.btn-container h1 {
+.Headlines {
     left: 37.27%;
     right: 34.48%;
-    top: 8.54%;
-    bottom: 88.12%;
     font-family: Raleway;
     font-style: normal;
     font-weight: 900;
-    font-size: 72px;
-    line-height: 85px;
+    font-size: 60px;
     color: #7FBFAA;
+    line-height: 50px;
+}
+
+.text-purple-section {
+    font-family: 'PT Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 30px;
+    font-size: 31px;
+    text-align: center;
+    color: #FFFFFF;
 }
