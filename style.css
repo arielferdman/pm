@@ -1,17 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
 body {
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
 }
 
 .top {
     background-color: #FFFFFF;
+    text-align: center;
 }
 
 .top h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 72px;
     line-height: 85px;
-    color: #554055;
+    color: #141645;
 }
 
 .top span {
@@ -42,44 +45,52 @@ body {
 }
 
 .section-2 {
-    background-color: #553F55;
+    background-color: #141645;
+    justify-content: center;
+}
+
+.btn-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 #btn-1 {
-    left: 22.77%;
-    right: 58.42%;
-    top: 2.99%;
-    bottom: 94.45%;
-    background: #D4DFAA;
+    height: 50px;
+    width: 200px;
+    background: #3CC1D9;
     border-radius: 200px;
+    border: none;
     font-family: 'Raleway', sans-serif;
-    font-weight: bold;
-    margin-top: 8px
+    font-weight: 900;
+    font-size: 18px;
+    margin-top: 8px;
+    margin-right: 40px;
 }
 
 #btn-2 {
-    left: 47.46%;
-    right: 20.23%;
-    top: 2.99%;
-    bottom: 94.46%;
-    background: #553F55;
+    height: 50px;
+    width: 300px;
+    background: none;
     border: 1.5px solid #D4DFAA;
     box-sizing: border-box;
     border-radius: 200px;
     font-family: 'Raleway', sans-serif;
-    font-weight: bold;
     color: #FFFFFF;
-    margin-top: 8px
+    margin-top: 8px;
+    font-weight: 900;
+    font-size: 18px;
 }
 
 .Headlines {
     left: 37.27%;
     right: 34.48%;
-    font-family: Raleway;
-    font-style: normal;
+    font-family: 'Raleway', sans-serif;
     font-weight: 900;
     font-size: 60px;
     color: #7FBFAA;
+    text-align: center;
     line-height: 50px;
 }
 
@@ -90,5 +101,37 @@ body {
     line-height: 30px;
     font-size: 31px;
     text-align: center;
+    
     color: #FFFFFF;
+}
+
+.text-align {
+    width: 80%;
+}
+
+.input-form {
+    display: flex;
+    justify-content: center;
+}
+
+.input-form input {
+    height: 40px;
+    width: 200px; 
+    border: 1px solid #b4b2b2;
+    border-radius: 10px;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+ }
+
+ .text-form-input {
+     margin-right: 30px;
+ }
+
+.illustration {
+    background-color: #D4DFAA;
+    position: center;
+    height: 300px;
+    width: 700px;
 }
