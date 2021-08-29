@@ -1,6 +1,6 @@
 import random
-import json
-from land_page_back import valid_email, save_data, db_connection
+from datetime import datetime
+from land_page_back import save_data, db_connection
 
 
 ALPHABET = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',\
@@ -70,7 +70,7 @@ def delete_db():
 
 def main():
 
-    check_db(200)
+    check_db(5000)
 
     print_db()
 

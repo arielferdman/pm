@@ -7,6 +7,7 @@ import consts
 
 def db_connection():
 
+    #! here we assume that we already heva a working db and collection named users!
     #TODO create secure environment variables or oder way to store secret info
 
     conn_str = f"mongodb+srv://{consts.USERNAME}:{consts.PASSWORD}@cluster0.wyznt.mongodb.net/{consts.DB_NAME}?retryWrites=true&w=majority"
@@ -40,8 +41,12 @@ def save_data(db, data):
     timestamp = datetime.now().strftime(r"%d/%m/%Y, %H:%M:%S") #TODO - time zone ? israel or utc, but not machine time!
     #? do we need to use _id field for each user and if so how to generate it
     #? but if we dont mongo add something like - '_id': ObjectId('612b6386ca405a7a4b7a1591')
+    if db.users.count() == 0:
+        id = 0
+    else:
+        id = (db.users.find().sort("_id", -1).limit(1).next()['_id']) + 1
 
-    db.users.insert_one({"email": email, "timestamp": timestamp})
+    db.users.insert_one({"_id": id, "email": email, "timestamp": timestamp})
 
 
 def main():
