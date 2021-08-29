@@ -1,5 +1,4 @@
 import random
-from datetime import datetime
 from land_page_back import save_data, db_connection
 
 
