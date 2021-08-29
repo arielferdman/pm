@@ -2,3 +2,4 @@ git checkout -b david
 --set-upstream gitwow
 wow
 stam
+stam
