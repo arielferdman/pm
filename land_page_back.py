@@ -32,7 +32,7 @@ def save_data(db, data):
     
     email = data["email"]
     if not valid_email(email):
-        raise Exception("Unvalid email address") #? And do you have better exception for this one?
+        raise Exception("Invalid email address") #? And do you have better exception for this one?
 
     if db.users.find_one({"email": email}) != None:
         raise Exception("Email address is already exists in the database") #? And for this one?
@@ -48,7 +48,9 @@ def main():
     db = db_connection()
     
     #data = get_data()
-    #save_data(db, data)
+
+    #save_data(db, data) #TODO! Exceptions without try-catch!
+    
 
 
 if __name__ == '__main__':
