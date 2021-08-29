@@ -1,2 +1,2 @@
 git checkout -b david
---set-upstream git
+--set-upstream gitwow
