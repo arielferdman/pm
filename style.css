@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
 
+.animation-wrapper {
+    width: 371px;
+    height: 382px;
+    display: inline-block;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -11,6 +17,7 @@ body {
     max-width: 800px;
     position: absolute;
     z-index: -1;
+
     left: 0;
 }
 
@@ -22,7 +29,6 @@ body {
     left: -90px;
     top: 1858px;
     border-radius: 0px;
-    
 }
 
 .blue-wave-2 {
@@ -134,7 +140,7 @@ max-width: 80%;
 
 .text-align {
     width: 70%;
-    margin-left:auto;
+    margin-left: auto;
 }
 
 .input-form {
@@ -201,9 +207,9 @@ max-width: 80%;
     margin-left: 20px;
  }
 
- .join-us-h1 {
-     text-align: center;
- }
+.join-us-h1 {
+    text-align: center;
+}
 
 .illustration {
     background-color: #323695;
@@ -233,20 +239,20 @@ ul {
     max-height: 35px;
  }
 
- .icon-1:before {
-    content: url('./images/dotLeftDown.svg') ;
+.icon-1:before {
+    content: url('./images/dotLeftDown.svg');
     margin-right: 10px;
     vertical-align: middle;
- }
+}
 
- .icon-2:before {
-    content: url('./images/dotRightDown.svg') ;
+.icon-2:before {
+    content: url('./images/dotRightDown.svg');
     margin-right: 10px;
     vertical-align: middle;
- }
+}
 
- .icon-3:before {
-    content: url('./images/dotLeftUp.svg') ;
+.icon-3:before {
+    content: url('./images/dotLeftUp.svg');
     margin-right: 10px;
     vertical-align: middle;
  }
