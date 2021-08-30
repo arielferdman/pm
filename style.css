@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
-/* @import './images.js/'; */
 
-.animation-wrapper {
+/* .animation-wrapper {
     width: 371px;
     height: 382px;
     display: inline-block;
-}
+} */
 
 body {
     display: flex;
@@ -14,8 +13,11 @@ body {
 }
 
 .blue-wave-1 {
+    width: 100%;
+    max-width: 800px;
     position: absolute;
     z-index: -1;
+    left: 0;
 }
 
 .white-wave {
@@ -29,10 +31,12 @@ body {
 }
 
 .blue-wave-2 {
+    width: 100%;
+    max-width: 800px;
     position: absolute;
     z-index: -1;
     top: 1450px;
-    left: 600px;
+    right: 0;
 }
 
 .top {
@@ -40,25 +44,19 @@ body {
     text-align: center;
 }
 
-/* .top h1 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 68px;
-    line-height: 85px;
-    color: #141645;
-} */
-
 .top-span-text {
     width: 904px;
     height: 116px;
     font-family: 'PT Sans', sans-serif;
-    font-size: 40px;
-    line-height: 58px;
+    font-size: 3vw;
+    line-height: 8vh;
     text-align: center;
     color: #434444;
 }
 
 .top-heading-img {
-    margin-top: 30px;
+margin-top: 30px;
+max-width: 80%;
 }
 
 .top img {
@@ -69,8 +67,8 @@ body {
 .text {
     height: 94px;
     font-family: 'PT Sans', sans-serif;
-    font-size: 31px;
-    line-height: 40px;
+    font-size: 2vw;
+    line-height: 6vh;
     text-align: center;
     color: #434444;
 }
@@ -105,22 +103,8 @@ body {
     font-weight: 900;
     font-size: 18px;
     margin-top: 8px;
-    margin-right: 90px;
 }
 
-#btn-2 {
-    height: 50px;
-    width: 300px;
-    background: none;
-    border: 1.5px solid #D4DFAA;
-    box-sizing: border-box;
-    border-radius: 200px;
-    font-family: 'Raleway', sans-serif;
-    color: #FFFFFF;
-    margin-top: 8px;
-    font-weight: 900;
-    font-size: 18px;
-}
 
 /* .btn:hover {
 
@@ -138,7 +122,7 @@ body {
 .Headlines {
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
-    font-size: 60px;
+    font-size: 4vw;
     color: #7FBFAA;
     line-height: 50px;
     z-index: 3;
@@ -146,10 +130,8 @@ body {
 
 .text-purple-section {
     font-family: 'PT Sans', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 40px;
-    font-size: 28px;
+    line-height: 6vh;
+    font-size: 2vw;
     color: #FFFFFF;
     z-index: 3;
 }
@@ -189,27 +171,39 @@ body {
     height: 30px;
     width: 30px;
     background: rgba(196, 196, 196, 0.2);
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.2);
     border: none;
     border-radius: 200px;
+    -webkit-border-radius: 200px;
     margin-right: 20px;
+    -webkit-appearance: none;
+    display: flex;
+    align-items: center;
 }
+
+.check-box-input:checked:after {
+    content: url('./images/v.svg');
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
 
 .checkbox-container {
     display: flex;
+    align-items: center;
 }
 
 .check-box-text {
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
-    font-size: 27px;
+    font-size: 20px;
     opacity: 0.4;
     margin: 0;
 }
 
 ::-webkit-input-placeholder {
-    text-align: center;
-}
+    text-align: left;
+    margin-left: 20px;
+ }
 
 .join-us-h1 {
     text-align: center;
@@ -218,7 +212,10 @@ body {
 .illustration {
     background-color: #323695;
     height: 300px;
-    width: 700px;
+    min-height: 10vh;
+    min-width: 15vh;
+    width: 80%;
+    max-width: 700px;
     display: flex;
     margin: auto;
     justify-content: center;
@@ -231,7 +228,14 @@ ul {
     margin-left: 0;
     padding-left: 1em;
     text-indent: -1em;
-}
+ }
+ 
+ li svg {
+    width: 2vw;
+    height: 2vw;
+    max-width: 35px;
+    max-height: 35px;
+ }
 
 .icon-1:before {
     content: url('./images/dotLeftDown.svg');
@@ -249,4 +253,111 @@ ul {
     content: url('./images/dotLeftUp.svg');
     margin-right: 10px;
     vertical-align: middle;
+ }
+
+ .animation {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+    align-items: baseline;
+ }
+
+ .animation-man {
+     width: 7vw;
+ }
+
+ .animation-machine {
+    width: 25vw;
+}
+
+@media screen and (max-width: 1025px) {
+    .top-span-text {
+        font-size: 3vw;
+        line-height: 4vh;
+    }
+
+    .text {
+        font-size: 2vw;
+        line-height: 3vh;
+    }
+
+    .Headlines {
+    font-size: 4vw;
+    }
+
+    .text-purple-section {
+        line-height: 4vh;
+        font-size: 2.2vw;
+    }
+
+    .text-align {
+        width: 80%;
+    }
+
+    .blue-wave-2 {
+        top: 1100px;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .top-span-text {
+        font-size: 4vw;
+    }
+
+    .text {
+        font-size: 3vw;
+    }
+
+    .Headlines {
+    font-size: 5vw;
+    }
+
+    .text-purple-section {
+        line-height: 6vh;
+        font-size: 2.4vw;
+    }
+
+    .blue-wave-2 {
+        top: 1100px;
+    }
+    
+}
+
+@media screen and (max-width: 412px) {
+    .top-span-text {
+        font-size: 4vw;
+    }
+
+    .text {
+        font-size: 3vw;
+    }
+
+    .Headlines {
+    font-size: 6vw;
+    }
+
+    .text-purple-section {
+        line-height: 3vh;
+        font-size: 3.2vw;
+    }
+
+    .top-heading-img {
+        max-width: 70%;
+    }
+
+    .text-align {
+        width: 90%;
+    }
+
+    #btn-1 {
+        height: 4vh;
+        width: 30vw;
+        font-size: 3vw;
+    }
+    
+    .blue-wave-2 {
+        top: 1100px;
+    }
 }
