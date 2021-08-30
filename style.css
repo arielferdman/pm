@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
-@import './images.js/';
+/* @import './images.js/'; */
+
+.animation-wrapper {
+    width: 371px;
+    height: 382px;
+    display: inline-block;
+}
 
 body {
     display: flex;
@@ -9,7 +15,7 @@ body {
 
 .blue-wave-1 {
     position: absolute;
-    z-index:-1;
+    z-index: -1;
 }
 
 .white-wave {
@@ -20,7 +26,6 @@ body {
     left: -90px;
     top: 1858px;
     border-radius: 0px;
-    
 }
 
 .blue-wave-2 {
@@ -53,7 +58,7 @@ body {
 }
 
 .top-heading-img {
-margin-top: 30px;
+    margin-top: 30px;
 }
 
 .top img {
@@ -151,7 +156,7 @@ margin-top: 30px;
 
 .text-align {
     width: 70%;
-    margin-left:auto;
+    margin-left: auto;
 }
 
 .input-form {
@@ -204,11 +209,11 @@ margin-top: 30px;
 
 ::-webkit-input-placeholder {
     text-align: center;
- }
+}
 
- .join-us-h1 {
-     text-align: center;
- }
+.join-us-h1 {
+    text-align: center;
+}
 
 .illustration {
     background-color: #323695;
@@ -226,22 +231,22 @@ ul {
     margin-left: 0;
     padding-left: 1em;
     text-indent: -1em;
- }
+}
 
- .icon-1:before {
-    content: url('./images/dotLeftDown.svg') ;
+.icon-1:before {
+    content: url('./images/dotLeftDown.svg');
     margin-right: 10px;
     vertical-align: middle;
- }
+}
 
- .icon-2:before {
-    content: url('./images/dotRightDown.svg') ;
+.icon-2:before {
+    content: url('./images/dotRightDown.svg');
     margin-right: 10px;
     vertical-align: middle;
- }
+}
 
- .icon-3:before {
-    content: url('./images/dotLeftUp.svg') ;
+.icon-3:before {
+    content: url('./images/dotLeftUp.svg');
     margin-right: 10px;
     vertical-align: middle;
- }
+}
