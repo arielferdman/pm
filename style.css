@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
 
-.animation-wrapper {
+/* .animation-wrapper {
     width: 371px;
     height: 382px;
     display: inline-block;
-}
+} */
 
 body {
     display: flex;
@@ -17,7 +17,6 @@ body {
     max-width: 800px;
     position: absolute;
     z-index: -1;
-
     left: 0;
 }
 
@@ -44,7 +43,6 @@ body {
     background-color: #FFFFFF;
     text-align: center;
 }
-
 
 .top-span-text {
     width: 904px;
@@ -267,12 +265,10 @@ ul {
 
  .animation-man {
      width: 7vw;
-     /* height: 2vw; */
  }
 
  .animation-machine {
     width: 25vw;
-    /* height: 2vw; */
 }
 
 @media screen and (max-width: 1025px) {
