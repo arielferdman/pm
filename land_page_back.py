@@ -29,23 +29,16 @@ def get_data():
 
 def save_data(db, data):
     if not "email" in data.keys():
-        raise Exception("Email field not exists") #? Do you have better exception for this one?
+        raise Exception("Email field not exists")
     
     email = data["email"]
     if not valid_email(email):
-        raise Exception("Invalid email address") #? And do you have better exception for this one?
+        raise Exception("Invalid email address")
 
     if db.users.find_one({"email": email}) != None:
-        raise Exception("Email address is already exists in the database") #? And for this one?
+        raise Exception("Email address is already exists in the database")
 
     timestamp = datetime.now().strftime(r"%d/%m/%Y, %H:%M:%S") #TODO - time zone ? israel or utc, but not machine time!
-    #? do we need to use _id field for each user and if so how to generate it
-    #? but if we dont mongo add something like - '_id': ObjectId('612b6386ca405a7a4b7a1591')
-    if db.users.count() == 0:
-        id = 0
-    else:
-        id = (db.users.find().sort("_id", -1).limit(1).next()['_id']) + 1
-
     db.users.insert_one({"_id": id, "email": email, "timestamp": timestamp})
 
 

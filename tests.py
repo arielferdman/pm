@@ -69,7 +69,7 @@ def delete_db():
 
 def main():
 
-    check_db(5000)
+    check_db(50)
 
     print_db()
 
