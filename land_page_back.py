@@ -2,8 +2,8 @@ import re
 import json
 from datetime import datetime
 from pymongo import MongoClient
-import consts
-
+from Exceptions import *
+import consts  
 
 def db_connection():
     #! here we assume that we already heva a working db and collection named users!
@@ -50,8 +50,15 @@ def main():
     #json_data = get_data()
 
     #save_data(db, json_data) #TODO! Exceptions without try-catch!
-    
-
+    try:
+        x = db.users.insert_one({"name": "yehuda", "email": "yehuda@hfe.org", "timestamp": datetime.now().strftime(r"%d/%m/%Y, %H:%M:%S")})
+        #raise EmailDuplicationError()
+        #raise JsonValidationError('"name" field is required.')
+        #raise LandPageException("test")
+    except Exception as ex:
+        print(type(ex).__name__, "=>", ex)
+    else:
+        print(x.inserted_id)
 
 if __name__ == '__main__':
     main()

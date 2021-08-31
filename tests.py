@@ -14,7 +14,7 @@ def email_gen():
     mail = ''
     if random.random() > 0.97:
         return mail
-    for i in range(random.randint(0, 17)):
+    for _ in range(random.randint(0, 17)):
         mail += random.choice(ALPHABET + NUMBERS)
     if random.random() > 0.05:
         mail += "@"
@@ -32,15 +32,18 @@ def check_email(emails):
 
 
 def json_gen():
-    #TODO add contributor field and more names
     json_string = {}
-    if random.random() > 0.95:
+    if random.random() > 0.97:
         return json_string
-    if random.random() < 0.2:
-        json_string["name"] = ''.join([random.choice(ALPHABET) for i in range(random.randint(0, 10))])
-    if random.random() < 0.1:
+    if random.random() > 0.2:
+        json_string["name"] = ''.join([random.choice(ALPHABET) for _ in range(random.randint(0, 10,))])
+    if random.random() < 0.05:
         return json_string
     json_string["email"] = email_gen()
+    if random.random() > 0.89:
+        json_string["contributor"] = True
+    elif random.random() < 0.4:
+        json_string["contributor"] = False
     return json_string
 
 def check_db(count):
@@ -71,11 +74,8 @@ def delete_db():
 def main():
 
     check_db(50)
-
     print_db()
-
     delete_db()
-
 
 
 
