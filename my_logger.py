@@ -10,9 +10,8 @@ class LogCode(str, Enum):
 
 
 def log(db, timestamp, code=LogCode.d, origin="", message="", backstack="", object_id="", test=True):
-    print("log")
     if db is None:
-        return
+        return #TODO write to file
     log_data = {
         "timestamp": timestamp,
         "code": code,
@@ -22,6 +21,7 @@ def log(db, timestamp, code=LogCode.d, origin="", message="", backstack="", obje
         "object_id": object_id,
         "test": test
     }
-    db.logs.insert_one(log_data)
+    db.logs.insert_one(log_data) #TODO if log was not successful save to file (?)
+    
 
 

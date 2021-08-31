@@ -1,5 +1,6 @@
 import random
-from land_page_back import save_data, db_connection
+import json
+from land_page_back import run, db_connection
 
 
 ALPHABET = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',\
@@ -14,7 +15,7 @@ def email_gen():
     mail = ''
     if random.random() > 0.97:
         return mail
-    for i in range(random.randint(0, 17)):
+    for _ in range(random.randint(0, 17)):
         mail += random.choice(ALPHABET + NUMBERS)
     if random.random() > 0.05:
         mail += "@"
@@ -24,23 +25,20 @@ def email_gen():
 
     return mail
 
-"""
-def check_email(emails):
-    for email in emails:
-        print("{:<30} {}".format(email, bool(valid_email(email))))
-"""
-
 
 def json_gen():
-    #TODO add contributor field and more names
     json_string = {}
-    if random.random() > 0.95:
+    if random.random() > 0.97:
         return json_string
-    if random.random() < 0.2:
-        json_string["name"] = ''.join([random.choice(ALPHABET) for i in range(random.randint(0, 10))])
-    if random.random() < 0.1:
+    if random.random() > 0.2:
+        json_string["name"] = ''.join([random.choice(ALPHABET) for _ in range(random.randint(0, 10,))])
+    if random.random() < 0.05:
         return json_string
     json_string["email"] = email_gen()
+    if random.random() > 0.89:
+        json_string["contributor"] = True
+    elif random.random() < 0.4:
+        json_string["contributor"] = False
     return json_string
 
 def check_db(count):
@@ -49,7 +47,7 @@ def check_db(count):
     for i in range(count):
         json_data = json_gen()
         try:
-            save_data(db, json_data)
+            run(json.dumps(json_data))
         except Exception as ex:
             print("{:<50} {}".format(str(json_data), ex))
         else:
@@ -58,24 +56,22 @@ def check_db(count):
 
 def print_db():
     db = db_connection()
-    data = db.users.find()
+    data = db.leads.find()
     for i in data:
         print(i)
 
 
 def delete_db():
     db = db_connection()
-    db.users.delete_many({})
+    db.leads.delete_many({"test": True})
+    #db.logs.delete_many({"test": True})
 
 
 def main():
 
-    check_db(50)
-
+    check_db(25)
     print_db()
-
     delete_db()
-
 
 
 
