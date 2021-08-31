@@ -32,6 +32,7 @@ def check_email(emails):
 
 
 def json_gen():
+    #TODO add contributor field and more names
     json_string = {}
     if random.random() > 0.95:
         return json_string
