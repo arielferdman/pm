@@ -22,7 +22,7 @@ def valid_email(email):
 
 
 def valid_name(name):
-    regex = r'\b^[A-Za-z0-9_. ]+\b'
+    regex = r'^[A-Za-z0-9_. ]*$'
     return re.fullmatch(regex, name)
 
 

@@ -64,12 +64,12 @@ def print_db():
 def delete_db():
     db = db_connection()
     db.leads.delete_many({"test": True})
-    db.logs.delete_many({"test": True})
+    #db.logs.delete_many({"test": True})
 
 
 def main():
 
-    check_db(10)
+    check_db(25)
     print_db()
     delete_db()
 
