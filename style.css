@@ -55,8 +55,8 @@ body {
 }
 
 .top-heading-img {
-margin-top: 30px;
-max-width: 80%;
+    margin-top: 30px;
+    max-width: 80%;
 }
 
 .top img {
@@ -136,6 +136,10 @@ max-width: 80%;
     z-index: 3;
 }
 
+.space-line {
+    margin-left: 29px;
+}
+
 .text-align {
     width: 70%;
     margin-left: auto;
@@ -185,7 +189,7 @@ max-width: 80%;
     content: url('./images/v.svg');
     margin-left: 5px;
     margin-bottom: 5px;
-  }
+}
 
 .checkbox-container {
     display: flex;
@@ -197,13 +201,16 @@ max-width: 80%;
     font-weight: 900;
     font-size: 20px;
     opacity: 0.4;
-    margin: 0;
+}
+
+#disclaimer {
+    margin: 10px;
 }
 
 ::-webkit-input-placeholder {
     text-align: left;
     margin-left: 20px;
- }
+}
 
 .join-us-h1 {
     text-align: center;
@@ -228,14 +235,14 @@ ul {
     margin-left: 0;
     padding-left: 1em;
     text-indent: -1em;
- }
- 
- li svg {
+}
+
+li svg {
     width: 2vw;
     height: 2vw;
     max-width: 35px;
     max-height: 35px;
- }
+}
 
 .icon-1:before {
     content: url('./images/dotLeftDown.svg');
@@ -253,21 +260,21 @@ ul {
     content: url('./images/dotLeftUp.svg');
     margin-right: 10px;
     vertical-align: middle;
- }
+}
 
- .animation {
+.animation {
     display: flex;
     width: 80%;
     margin: auto;
     justify-content: space-evenly;
     align-items: baseline;
- }
+}
 
- .animation-man {
-     width: 7vw;
- }
+.animation-man {
+    width: 7vw;
+}
 
- .animation-machine {
+.animation-machine {
     width: 25vw;
 }
 
@@ -276,88 +283,83 @@ ul {
         font-size: 3vw;
         line-height: 4vh;
     }
-
     .text {
         font-size: 2vw;
         line-height: 3vh;
     }
-
     .Headlines {
-    font-size: 4vw;
+        font-size: 4vw;
     }
-
     .text-purple-section {
         line-height: 4vh;
         font-size: 2.2vw;
     }
-
     .text-align {
         width: 80%;
     }
-
     .blue-wave-2 {
         top: 1100px;
     }
-    
+    #disclaimer {
+        font-size: 2.2vw;
+    }
 }
 
 @media screen and (max-width: 800px) {
     .top-span-text {
         font-size: 4vw;
     }
-
     .text {
         font-size: 3vw;
     }
-
     .Headlines {
-    font-size: 5vw;
+        font-size: 5vw;
     }
-
     .text-purple-section {
         line-height: 6vh;
         font-size: 2.4vw;
     }
-
     .blue-wave-2 {
         top: 1100px;
     }
-    
+    .space-line {
+        margin-left: 27px;
+        margin-top: 0px;
+    }
+    #disclaimer {
+        font-size: 2.4vw;
+    }
 }
 
 @media screen and (max-width: 412px) {
     .top-span-text {
         font-size: 4vw;
     }
-
     .text {
         font-size: 3vw;
     }
-
     .Headlines {
-    font-size: 6vw;
+        font-size: 6vw;
     }
-
     .text-purple-section {
         line-height: 3vh;
         font-size: 3.2vw;
     }
-
     .top-heading-img {
         max-width: 70%;
     }
-
     .text-align {
         width: 90%;
     }
-
     #btn-1 {
         height: 4vh;
         width: 30vw;
         font-size: 3vw;
     }
-    
     .blue-wave-2 {
         top: 1100px;
+    }
+    #disclaimer {
+        font-size: 2.4vw;
     }
 }
