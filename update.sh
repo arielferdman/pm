@@ -1,5 +1,5 @@
 git checkout main
-echo "stam" >> stam.txt
+echo "nothing is stam" >> not_stam.txt
 git add .
-git c -m "stam"
-git ps
+git commit -m "nothing is stam"
+git push origin main
