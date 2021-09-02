@@ -162,7 +162,7 @@
     <h1 class="Headlines join-us-h1">So Come And Join Us!</h1>
     <form action="" class="input-form" id="form">
         <input type="text" class="text-form-input" placeholder="Name" id="name" />
-        <input type="mail" placeholder="Email" class="text-form-input" id="mail" />
+        <input type="email" placeholder="Email" class="text-form-input" id="email" />
         <div class="checkbox-container">
             <input type="checkbox" class="check-box-input" id="contributor" />
             <p class="check-box-text">I Want To Be A Contributor</p>
@@ -178,19 +178,19 @@
     <script>
         const form = document.getElementById('form');
         const name = document.getElementById('name');
-        const mail = document.getElementById('mail');
+        const email = document.getElementById('email');
         const contributor = document.getElementById('contributor');
 
         // handle Data from Form
         function storeForm(e) {
             e.preventDefault();
             const nameValue = name.value;
-            const mailValue = mail.value;
+            const emailValue = email.value;
             const contributorChecked = contributor.checked
 
             let obj = {
                 name: nameValue,
-                mail: mailValue,
+                email: emailValue,
                 contributor: contributorChecked
             };
 
