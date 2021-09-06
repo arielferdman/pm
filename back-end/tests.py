@@ -1,5 +1,6 @@
 import random
 import json
+from pprint import pprint
 from land_page_back import run, db_connection
 
 
@@ -66,12 +67,21 @@ def delete_db():
     db.leads.delete_many({"test": True})
     #db.logs.delete_many({"test": True})
 
+def print_last_logs(count=1):
+    db = db_connection()
+    res = db.logs.find().sort("_id", -1).limit(10)
+    for i in res:
+        #pprint(i)
+        print(i)
+        
+
 
 def main():
 
-    check_db(25)
+    check_db(10)
     print_db()
     delete_db()
+    #print_last_logs(3)
 
 
 

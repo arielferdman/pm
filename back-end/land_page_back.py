@@ -1,6 +1,7 @@
 import random
 import re
 import json
+import traceback
 from datetime import datetime
 from pymongo import MongoClient
 from errors import *
@@ -90,7 +91,7 @@ def run(json_data):
                       message="successfully inserted a new lead",
                       backstack="run",
                       object_id=obj_id,
-                      test=True) #TODO delete inn prod. (global varb?)
+                      test=True) #TODO delete in prod. (global varb?)
     except LandPageError as err:
         if db is not None:
             my_logger.log(db,
@@ -99,6 +100,7 @@ def run(json_data):
                           origin="landing_page",
                           message=str(err),
                           backstack="run",
+                          traceback=traceback.format_exc(),
                           object_id=obj_id,
                           test=True) #TODO delete inn prod. (global varb?)
     except Exception as err:
@@ -108,6 +110,7 @@ def run(json_data):
                           origin="landing_page",
                           message=str(err),
                           backstack="run",
+                          traceback=traceback.format_exc(),
                           object_id=obj_id,
                           test=True) #TODO delete inn prod. (global varb?)
 

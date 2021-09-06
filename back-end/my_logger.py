@@ -9,7 +9,7 @@ class LogCode(str, Enum):
     f = "FATAL"
 
 
-def log(db, timestamp, code=LogCode.d, origin="", message="", backstack="", object_id="", test=True):
+def log(db, timestamp, code=LogCode.d, origin="", message="", backstack="", traceback="", object_id="", test=True):
     if db is None:
         return #TODO write to file
     log_data = {
@@ -18,6 +18,7 @@ def log(db, timestamp, code=LogCode.d, origin="", message="", backstack="", obje
         "origin": origin,
         "message": message,
         "backstack": backstack,
+        "traceback": traceback,
         "object_id": object_id,
         "test": test
     }
